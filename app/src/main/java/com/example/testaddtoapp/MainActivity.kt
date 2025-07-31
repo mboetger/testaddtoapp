@@ -9,6 +9,7 @@ import io.flutter.embedding.android.FlutterView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var engines: FlutterViewEngines
+    private lateinit var flutterView: FlutterView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         val flutterContainer = requireViewById<ViewGroup>(R.id.flutter_view_container)
 
-        val flutterView = FlutterView(applicationContext)
+        flutterView = FlutterView(applicationContext)
         flutterContainer.addView(flutterView, MATCH_PARENT, MATCH_PARENT)
         
         var flutterViewEngine = engines.createAndRunEngine("1", listOf())

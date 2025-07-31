@@ -3,7 +3,7 @@ package com.example.testaddtoapp
 import android.app.Activity
 import android.content.Context
 import android.view.ViewGroup
-import androidx.activity.ComponentActivity
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import io.flutter.embedding.android.ExclusiveAppComponent
@@ -13,14 +13,14 @@ import io.flutter.embedding.engine.FlutterEngineCache
 import io.flutter.embedding.engine.FlutterEngineGroup
 
 class FlutterViewEngines(private val context: Context) {
-  private var activity: ComponentActivity? = null
+  private var activity: AppCompatActivity? = null
   // There is one "engine group" for the whole app, so that the shared library is loaded
   // once and they share the same heap space and garbage collector.
   private val engineGroup = FlutterEngineGroup(context)
   // Each engine in the group has its own runtime state and widget tree.
   private var engines = mutableMapOf<String, FlutterViewEngine>()
 
-  fun attachToActivity(activity: ComponentActivity) {
+  fun attachToActivity(activity: AppCompatActivity) {
     this.activity = activity
   }
 
@@ -52,10 +52,10 @@ class FlutterViewEngines(private val context: Context) {
 
 class FlutterViewEngine constructor(val engine: FlutterEngine) :
   DefaultLifecycleObserver, ExclusiveAppComponent<Activity> {
-  private var activity: ComponentActivity? = null
+  private var activity: AppCompatActivity? = null
   private var flutterView: FlutterView? = null
 
-  fun attachToActivity(activity: ComponentActivity) {
+  fun attachToActivity(activity: AppCompatActivity) {
     this.activity = activity
   }
 

@@ -44,6 +44,9 @@ gradle-wrapper.jar
 # Log files
 *.log
 
+# Swap files
+*.swp
+
 # Test reports
 */build/reports/
 */build/test-results/
