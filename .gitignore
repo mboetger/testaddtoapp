@@ -1,0 +1,76 @@
+gitignore
+# IDE files and directories
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+*.DS_Store
+Thumbs.db
+
+# Build files and directories
+build/
+app/build/
+captures/
+*.apk
+*.aab
+*.ap_
+*.aar
+*.jar
+*.class
+*.dex
+
+# Local configuration files
+local.properties
+
+# Keystore files (NEVER commit these)
+*.jks
+*.keystore
+
+# Gradle files
+.gradle/
+gradle-wrapper.jar
+!gradle-wrapper.properties # We usually want to track the wrapper properties
+
+# Android Studio Profiler files
+*.hprof
+*.snapshot
+
+# Google Services (if you download them manually, better to use environment variables or secure storage)
+# google-services.json # Consider if you want to commit this or handle it via CI/CD
+
+# Log files
+*.log
+
+# Test reports
+*/build/reports/
+*/build/test-results/
+
+# Lint reports
+*/build/outputs/lint-results-*
+
+# Mockito mock maker files (if using mockito-inline)
+/mockmaker/
+
+# Flutter specific (if you have Flutter modules in an add-to-app scenario)
+# .flutter-plugins
+# .flutter-plugins-dependencies
+# .packages
+# .dart_tool/
+# pubspec.lock # Typically committed, but sometimes excluded depending on team policy
+
+# User-specific local files (Android Studio)
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/runConfigurations/
+.idea/workspace.xml # Can be excluded, some prefer to share run configurations
+
+# Generated asset files (e.g., from some libraries)
+# assets/generated/
+
+# Sensitive configuration (use environment variables or secure injection instead)
+# secrets.properties
+# *.env
